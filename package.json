@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "private": true,
   "description": "JT Studio — audio production workspace",
-  "author": { "name": "J Tech Digital World", "email": "builds@example.com" },
+  "author": { "name": "J Tech Digital World", "email": "support@jtdigitalworld.com" },
   "main": "desktop/main.cjs",
   "scripts": {
     "start": "electron .",
