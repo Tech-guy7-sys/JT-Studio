@@ -1,0 +1,124 @@
+{
+  "product": "JT Studio",
+  "category": "Audio and music",
+  "schemaVersion": 1,
+  "templates": [
+    {
+      "id": "podcast",
+      "name": "Podcast Episode",
+      "description": "Voice-first episode layout",
+      "tracks": [
+        {
+          "name": "Host Voice",
+          "type": "audio",
+          "role": "primary-dialogue"
+        },
+        {
+          "name": "Guest Voice",
+          "type": "audio",
+          "role": "dialogue"
+        },
+        {
+          "name": "Intro Music",
+          "type": "audio",
+          "role": "music",
+          "gainDb": -18
+        },
+        {
+          "name": "SFX",
+          "type": "audio",
+          "role": "effects"
+        }
+      ],
+      "markers": [
+        "Cold open",
+        "Intro",
+        "Main segment",
+        "Sponsor break",
+        "Outro"
+      ],
+      "export": {
+        "format": "wav",
+        "sampleRate": 48000,
+        "bitDepth": 24
+      }
+    },
+    {
+      "id": "song-demo",
+      "name": "Song Demo",
+      "description": "Basic songwriting and arrangement session",
+      "tracks": [
+        {
+          "name": "Lead Vocal",
+          "type": "audio"
+        },
+        {
+          "name": "Backing Vocals",
+          "type": "audio"
+        },
+        {
+          "name": "Drums",
+          "type": "audio"
+        },
+        {
+          "name": "Bass",
+          "type": "audio"
+        },
+        {
+          "name": "Instruments",
+          "type": "audio"
+        },
+        {
+          "name": "Reference",
+          "type": "audio",
+          "mutedByDefault": true
+        }
+      ],
+      "markers": [
+        "Intro",
+        "Verse",
+        "Chorus",
+        "Verse 2",
+        "Bridge",
+        "Final Chorus",
+        "Outro"
+      ],
+      "export": {
+        "format": "wav",
+        "sampleRate": 48000,
+        "bitDepth": 24
+      }
+    },
+    {
+      "id": "voiceover",
+      "name": "Voice-over Session",
+      "description": "Narration and clean-up workflow",
+      "tracks": [
+        {
+          "name": "Narration",
+          "type": "audio"
+        },
+        {
+          "name": "Room Tone",
+          "type": "audio"
+        },
+        {
+          "name": "Music Bed",
+          "type": "audio",
+          "gainDb": -24
+        }
+      ],
+      "markers": [
+        "Slate",
+        "Take 1",
+        "Pickup",
+        "Final read"
+      ],
+      "export": {
+        "format": "wav",
+        "sampleRate": 48000,
+        "bitDepth": 24
+      }
+    }
+  ]
+}
