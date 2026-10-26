@@ -7,7 +7,7 @@
   "scripts": {
     "start": "electron .",
     "serve": "npx --yes http-server . -p 4173 -c-1",
-    "dist": "electron-builder --config electron-builder.yml"
+    "dist": "electron-builder --config electron-builder.yml --publish never"
   },
   "devDependencies": {
     "electron": "^33.2.1",
