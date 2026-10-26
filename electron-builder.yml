@@ -1,0 +1,49 @@
+appId: world.jtech.jtstudio
+productName: JT Studio
+directories:
+  output: release
+files:
+  - index.html
+  - README.md
+  - package.json
+  - desktop/**
+  - assets/**
+  - "*.css"
+  - "*.js"
+asar: true
+artifactName: ${productName}-${version}-${os}-${arch}.${ext}
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+        - ia32
+    - target: zip
+      arch:
+        - x64
+        - ia32
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+mac:
+  category: public.app-category.music
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+    - target: zip
+      arch:
+        - x64
+        - arm64
+linux:
+  category: AudioVideo
+  target:
+    - target: AppImage
+      arch:
+        - x64
+        - arm64
+    - target: deb
+      arch:
+        - x64
+        - arm64
