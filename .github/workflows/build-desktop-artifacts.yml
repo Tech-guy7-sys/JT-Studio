@@ -43,7 +43,7 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
       - name: Package JT Studio
-        run: npx electron-builder --config electron-builder.yml --${{ matrix.platform }} --${{ matrix.arch }}
+        run: npx electron-builder --config electron-builder.yml --publish never --${{ matrix.platform }} --${{ matrix.arch }}
       - name: Upload package artifacts (not a release)
         uses: actions/upload-artifact@v4
         with:
