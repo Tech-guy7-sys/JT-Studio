@@ -16,6 +16,20 @@
 @media(max-width:760px){.recipe-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.recipe-head{align-items:start;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){.recipe-card{transition:none}.recipe-card:hover{transform:none}}
 </style>
+
+<style id="jt-studio-visual-refresh">
+:root{--bg:#080a12;--panel:#131624;--line:#30364d;--mint:#7cf0d6;--blue:#85aaff}
+body{background:radial-gradient(ellipse at 90% -5%,#72e5cb18,transparent 36%),radial-gradient(ellipse at 4% 50%,#7da9ff0c,transparent 28%),var(--bg)}
+.hero{padding:26px;border:1px solid #72e5cb20;border-radius:22px;background:linear-gradient(120deg,#72e5cb0b,#7da9ff0b 60%,transparent);position:relative;overflow:hidden}
+.hero h1{background:linear-gradient(100deg,#f3f5ff 25%,#7cf0d6 65%,#a7baff);color:transparent;background-clip:text}
+.panel{border-radius:20px;box-shadow:0 16px 46px #0003}
+.recipe-panel{box-shadow:0 16px 46px #0003}
+.recipe-card{position:relative;overflow:hidden;background:linear-gradient(145deg,#111521,#0b0e17);text-align:left}
+.recipe-card:after{content:"";position:absolute;right:-22px;top:-25px;width:65px;height:65px;border:1px solid #72e5cb20;border-radius:50%;box-shadow:0 0 0 10px #72e5cb08;pointer-events:none}
+.recipe-card:focus-visible,.btn:focus-visible,.field input:focus-visible,.field textarea:focus-visible,.field select:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
+.panel:focus-within{border-color:#72e5cb50}
+@media(prefers-reduced-motion:reduce){.recipe-card{transition:none}.recipe-card:hover{transform:none}}
+</style>
 </head>
 <body>
 <header class="top"><div class="brand"><span class="mark">JT</span><span><strong>JT Studio</strong><small>AUDIO PRODUCTION WORKSPACE</small></span></div><a href="https://github.com/Tech-guy7-sys/jt-digital-world/tree/main/jt-apps">JT DIGITAL WORLD ↗</a></header>
