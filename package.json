@@ -3,12 +3,15 @@
   "version": "0.1.1",
   "private": true,
   "description": "JT Studio — audio production workspace",
-  "author": { "name": "J Tech Digital World", "email": "support@jtdigitalworld.com" },
+  "author": {
+    "name": "J Tech Digital World",
+    "email": "support@jtdigitalworld.com"
+  },
   "main": "desktop/main.cjs",
   "scripts": {
-    "start": "electron .",
+    "start": "node scripts/generate-app-icon.mjs && electron .",
     "serve": "npx --yes http-server . -p 4173 -c-1",
-    "dist": "electron-builder --config electron-builder.yml --publish never"
+    "dist": "node scripts/generate-app-icon.mjs && electron-builder --config electron-builder.yml --publish never"
   },
   "devDependencies": {
     "electron": "^33.2.1",
