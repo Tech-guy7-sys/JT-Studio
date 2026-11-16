@@ -18,6 +18,10 @@ npm install
 npm start
 ```
 
+## Installed application icon
+
+The desktop build generates a JT-branded JT Studio icon in PNG, multi-size Windows ICO and macOS ICNS formats. The icon is embedded in the Windows installer and shortcuts, macOS app bundle and Linux package, and is also used by the running app window. Windows uses the stable `world.jtech.jtstudio` AppUserModelID.
+
 ## Build desktop packages
 
 ```bash
