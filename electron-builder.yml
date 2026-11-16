@@ -49,10 +49,6 @@ mac:
 linux:
   icon: build/icons/jt-studio.png
   category: AudioVideo
-  desktop:
-    Name: JT Studio
-    Comment: JT Studio by J Tech Digital World
-    Categories: AudioVideo;Audio;
   target:
     - target: AppImage
       arch:
