@@ -1,6 +1,7 @@
 appId: world.jtech.jtstudio
 productName: JT Studio
 directories:
+  buildResources: build
   output: release
 files:
   - index.html
@@ -10,9 +11,12 @@ files:
   - assets/**
   - "*.css"
   - "*.js"
+  - build/icons/jt-studio.png
 asar: true
 artifactName: ${productName}-${version}-${os}-${arch}.${ext}
 win:
+  icon: build/icons/jt-studio.ico
+  requestedExecutionLevel: asInvoker
   target:
     - target: nsis
       arch:
@@ -23,9 +27,15 @@ win:
         - x64
         - ia32
 nsis:
+  installerIcon: build/icons/jt-studio.ico
+  uninstallerIcon: build/icons/jt-studio.ico
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: JT Studio
   oneClick: false
   allowToChangeInstallationDirectory: true
 mac:
+  icon: build/icons/jt-studio.icns
   category: public.app-category.music
   target:
     - target: dmg
@@ -37,7 +47,12 @@ mac:
         - x64
         - arm64
 linux:
+  icon: build/icons/jt-studio.png
   category: AudioVideo
+  desktop:
+    Name: JT Studio
+    Comment: JT Studio by J Tech Digital World
+    Categories: AudioVideo;Audio;
   target:
     - target: AppImage
       arch:
