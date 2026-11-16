@@ -1,5 +1,6 @@
 const { app, BrowserWindow, session } = require("electron");
 const path = require("node:path");
+const APP_ICON = path.join(__dirname, "../build/icons/jt-studio.png");
 
 function createWindow() {
   const window = new BrowserWindow({
@@ -8,6 +9,7 @@ function createWindow() {
     minWidth: 860,
     minHeight: 620,
     title: "JT Studio",
+    icon: APP_ICON,
     backgroundColor: "#0b0d16",
     webPreferences: {
       contextIsolation: true,
@@ -20,6 +22,7 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
+  if (process.platform === "win32") app.setAppUserModelId("world.jtech.jtstudio");
   session.defaultSession.setPermissionRequestHandler((_webContents, permission, callback) => {
     // JT Studio needs explicit browser permission for microphone-based recording.
     callback(permission === "media");
